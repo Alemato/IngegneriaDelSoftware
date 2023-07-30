@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Recupera albero</title>
+		<link rel="shotcut icon" href="logo1.png"/>
+		<link rel="shotcut icon" href="icon.png"/>
+		<link href="ppc_style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	
+	<body>
+		<div class="tooltip">
+			<img src ="icon.png" id="img">
+			<span class="tooltiptext">	&nbsp;L'albero non verrà creato se non verranno riempiti tutti gli input<br>
+									  	&nbsp;Regole:<br>
+									  	&nbsp;1.Gli input riguardanti i nomi possono accettare qualsiasi parametro.<br>
+									  	&nbsp;2.Gli input riguardanti valori numerici come:split size, depth, nodi <br>
+									    	&nbsp;	&nbsp;	&nbsp;,archi e i valori degli attributi possono essere solo numeri.<br>
+									  	&nbsp;Premere l'immagine per tornare alla pagina precedente.
+									  </span>
+		</div>
+		
+		<div class="division" id="division">
+				<a href="index.html"><img src="logo1.png"></a>
+		</div >
+		
+		<!--<div id="container">-->
+			<form id="requisiti" action="Request_Info_A" method="POST">
+				<!--div sinistro-->
+				<div id="vertical">
+					<label for="nomeAlbero" class="label_A" id="A"><strong>inserisci nome albero:</strong></label><br>
+					<input type="text" name="nomeAlbero" id="nomeAlbero" placeholder="Es. 'pruduction tree'"><br>
+				
+					<label for="split_size" class="label_A" id="B"><strong>inserisci split size:</strong></label><br>
+					<input type="text" name="splitSize" id="splitSize" placeholder="inserire intero"><br>
+				
+					<label for="depth" class="label_A" id="C"><strong>inserisci depth:</strong></label><br>
+					<input type="text" name="depth" id="depth" placeholder="inserire intero">
+				</div>
+			
+				<!--div centrale-->
+				<div id="vertical">
+					<div id="first_block">
+						<label for="myTable_A" id="list"><strong>Attribute List:</strong></label>	<br>
+
+						<table id="myTable_A">
+							<tr>
+								<th>
+									<label for="numeroNodi" class="label_A" id="D">Numero attributi nodi:</label>
+								</th>
+								<th>
+									<input type="text" class="input_table_A" name="numeroNodi" id="numeroNodi" maxlength="2" onkeyup="myFunction_A(this)"/>	
+								</th>
+							</tr>
+							<tbody id="tbody_A">
+							</tbody>
+						</table>
+						
+						<table id="myTable_B">
+							<tr>
+								<th>
+									<label for="numeroArchi"class="label_A" id="E">Numero attributi archi:</label>
+								</th>
+								<th>
+									<input type="text" class="input_table_B" name="numeroNodi" id="numeroArchi" maxlength="2" onkeyup="myFunction_B(this)"/>	
+								</th>
+							</tr>
+							<tbody id="tbody_B">
+							</tbody>
+						</table>
+					</div>	
+				</div>
+			
+				<!--div destro-->
+				<div id="vertical">
+					<div class="bottone" >	
+						<input type="submit" value="crea l'albero" onclick="return verify()">
+					</div>
+				</div>
+			</form>
+			
+			<div id="alert">
+				<div id="alertmessage"></div>
+			</div>
+		<!--</div>-->
+	</body>
+</html>
